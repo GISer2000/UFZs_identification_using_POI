@@ -1,0 +1,2 @@
+# UFZs_identification_using_POI
+使用POI数据识别城市功能区，通过Word2vec词嵌入模型提取POI的高阶语义。
