@@ -1,9 +1,31 @@
 # 介绍
 使用《[Sensing spatial distribution of urban land use by integrating points-of-interest and Google Word2Vec model](https://www.tandfonline.com/doi/full/10.1080/13658816.2016.1244608)》这篇文章的方法识别城市功能区。
 比较经典的一篇城市功能区识别方法研究文章，整合了Word2vec模型和POI数据，提高了城市功能区识别精度。
-- 文章摘要：城市土地利用信息在各种城市规划和环境监测过程中发挥着至关重要的作用。在过去的几十年里，随着遥感（RS）、地理信息系统（GIS）和地理空间大数据技术的快速发展，人们开发了许多方法来识别城市土地的精细利用。兴趣点（POIs）被广泛用于提取与城市土地利用类型和功能区相关的信息。然而，由于缺乏可靠的模型，很难量化兴趣点空间分布与区域土地利用类型之间的关系。以往的方法可能会忽略可从 POI 中提取的丰富空间特征。在本研究中，我们建立了一个创新框架，通过整合百度 POI 和 Word2Vec 模型，在交通分析区（TAZ）尺度上检测城市土地利用分布。该框架是在 2013 年利用谷歌开源的深度学习语言模型实现的。首先，通过考虑TAZ和内部POI的空间分布，使用贪婪算法将珠江三角洲（PRD）的数据转化为TAZ-POI语料库。然后，使用 Word2Vec 模型提取 POI 和 TAZ 的高维特征向量。最后，为了验证 POI/ TAZ 向量的可靠性，我们采用了基于 K-Means 的聚类模型来分析 POI/ TAZ 向量之间的相关性，并利用随机森林算法（RFA）模型部署 TAZ 向量来识别城市土地利用类型。与一些最先进的概率主题模型（PTM）相比，所提出的方法可以有效地获得最高的准确率（OA = 0.8728，kappa = 0.8399）。此外，研究结果还可用于帮助城市规划者监测城市土地利用动态和评估城市规划方案的影响。
+- 以往的方法可能会忽略可从 POI 中提取的丰富空间特征。在本研究中，我们建立了一个创新框架，通过整合百度 POI 和 Word2Vec 模型，在交通分析区（TAZ）尺度上检测城市土地利用分布。
+- 缺乏标注数据，我只进行了聚类分析。
 
 # 数据集
 数据集来自上海：
 - 2020年高德POI
 - 2024年OSM路网
+
+# 实验
+
+## 预处理
+
+- poi数量分布
+<center><img src="fig/poi_num.png"><center> 
+
+- poi空间分布
+<center><img src="fig/poi.png"><center> 
+
+- road缓冲区
+<center><img src="fig/road_buffer.png"><center> 
+
+- taz
+<center><img src="fig/taz.png"><center> 
+
+- k-means
+<center><img src="fig/Silhouette.png"><center> 
+<center><img src="fig/k=4.png"><center> 
+<center><img src="fig/k=7.png"><center> 
