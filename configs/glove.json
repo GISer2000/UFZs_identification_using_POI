@@ -1,0 +1,13 @@
+{
+    "model_name": "glove", 
+    "model_type": null, 
+    "docs_path": "dataset/地理语料库_taz.csv",
+    "word_embedding": 70,
+    "min_count": 1,
+    "window_size": 5,
+    "epochs": 100,
+    "batch_size": 512,
+    "lr": 1e-3,
+    "save_models": "checkpoints",
+    "get_embeddings": "embeddings"
+}
