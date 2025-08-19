@@ -42,8 +42,9 @@ Structure/
 
 ## 环境依赖
 
-### torch版本
 - Python 3.11.11
+
+### torch版本
 - torch==2.8.0+cu128
 - numpy==1.26.4
 ### gensim版本
